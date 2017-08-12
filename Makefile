@@ -4,7 +4,7 @@ clean-pyc:
 	find . -name '*~' -exec rm -f  {} +
 
 test: clean-pyc
-	python CalculateBasePriceTest.py
+	python calculate_base_price_test.py
 
 run:
 	python calculate_cart_price.py
