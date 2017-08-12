@@ -1,12 +1,15 @@
 from collections import defaultdict
 
+from BasePrice import BasePriceItem
+
 
 class BasePrices:
-    def __init__(self):
+    def __init__(self, base_price_json):
         self.base_prices = defaultdict(list)
-
-    def __add__(self, other):
-        self.base_prices[other.product_type].append(other)
+        for bp in base_price_json:
+            if bp:
+                bp = BasePriceItem(bp['product-type'], bp['options'], bp['base-price'])
+                self.base_prices[bp.product_type].append(bp)
 
 
     def get_base_price(self, product_type, options):
@@ -21,10 +24,9 @@ class BasePrices:
             size = None
 
         for bp in base_price_list:
-            if (color and color in bp.bp_options['colour']):
-                if size and size in bp.bp_options['size']:
-                    return bp.base_price
-            elif not color and size and size in bp.bp_options['size']:
-                return  bp.base_price
-            elif not color and not size:
+            if product_type == 'hoodie' and color in bp.bp_options['colour'] and size in bp.bp_options['size']:
+                return bp.base_price
+            elif product_type == 'sticker' and size in bp.bp_options['size']:
+                return bp.base_price
+            elif product_type == 'leggings':
                 return bp.base_price
