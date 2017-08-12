@@ -32,14 +32,14 @@ b) Run Test
 I generated some code coverage report using python "coverage" tool.
 
 To install coverage tool:
-``` pip install coverage```
+``` pip install coverage ```
 
 To generate coverage :
-```coverage run calculate_cart_price_test.py ```
+``` coverage run calculate_cart_price_test.py ```
 
 To look at the report:
-```coverage report```
+``` coverage report ```
 
 To generat  html format report:
-```coverage html```
-``` open htmlcov/index.html```
+``` coverage html ```
+``` open htmlcov/index.html ```
