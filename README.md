@@ -39,7 +39,7 @@ To install coverage tool:
 ``` pip install coverage```
 
 To generate coverage :
-```coverage run test_cc_bt.py ```
+```coverage run calculate_cart_price_test.py ```
 
 To look at the report:
 ```coverage report```
