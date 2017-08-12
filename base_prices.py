@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 from base_price import BasePriceItem
-from pconstants import ItemConstants
+from constants import ItemConstants
 
 
 class BasePrices:
