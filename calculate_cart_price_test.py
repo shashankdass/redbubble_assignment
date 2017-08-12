@@ -2,8 +2,8 @@ import unittest
 import json
 
 from base_prices import BasePrices
-from cart import Cart
-from constants import ProductType, ProductOptions
+from pcart import Cart
+from pconstants import ProductType, ProductOptions
 
 TEST_CART_INPUTS = ["sample_inputs/cart1.json", "sample_inputs/cart2.json", "sample_inputs/cart3.json",
                     "sample_inputs/cart4.json"]
