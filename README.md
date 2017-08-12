@@ -23,17 +23,19 @@ There are couple of ways you can run this program:
 1) Using provided makefile
 
 	a) Run program:  Using the default file provided with this package
-		command: ``` make run ```
+		i) command: ``` make run ```
+		effect: uses one of the cart and provided base_price file
 	b) Run Test
 	    command: ``` make test ```
 2) Directly using the python program
 	a) Running with stdin
-		command : ``` python  calculate_cart_price.py ```
-        This will prompt user to enter path to base price file and cart file.
-        If User does not enter any input I am using the default input that is provided.
+		command : ``` python  calculate_cart_price.py <complete_path_to_cart> <complete_path_to_base_price_file>```
+        If User does not enter any input, it prints error and comes out.
 
+	b) Running test directly
+		command: ```python calculate_cart_price_test.py```
 
-I generated some code coverage report using python coverage tool.
+I generated some code coverage report using python "coverage" tool.
 
 To install coverage tool:
 ``` pip install coverage```

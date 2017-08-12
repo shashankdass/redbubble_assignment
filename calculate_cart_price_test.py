@@ -7,8 +7,8 @@ from constants import ProductType, ProductOptions
 
 TEST_CART_INPUTS = ["sample_inputs/cart1.json", "sample_inputs/cart2.json", "sample_inputs/cart3.json",
                     "sample_inputs/cart4.json"]
-EXPECTED_OUTPUTS = [79800, 162031, 197600, 270816]
-INPUT_INDEX = 1
+EXPECTED_OUTPUTS = [4560, 9363, 9500, 11356]
+INPUT_INDEX = 3
 TEST_BASE_PRICE = "sample_inputs/base_price.json"
 DISTINCT_PRODUCTS = 3
 

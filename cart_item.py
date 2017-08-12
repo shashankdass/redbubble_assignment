@@ -9,4 +9,4 @@ class CartItem:
         self.quantity = cart_item_json[ItemConstants.QUANTITY]
         self.price = None
         if base_price:
-            self.price = (base_price + round(base_price * self.artist_markup)) * self.quantity
+            self.price = (base_price + round((base_price * self.artist_markup) / 100)) * self.quantity

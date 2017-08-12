@@ -7,4 +7,4 @@ test: clean-pyc
 	python calculate_base_price_test.py
 
 run:
-	python calculate_cart_price.py
+	python calculate_cart_price.py "sample_inputs/cart2.json" "sample_inputs/base_price.json"
