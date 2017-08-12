@@ -7,6 +7,7 @@ from constants import ProductType, ProductOptions
 
 TEST_CART_INPUTS = ["sample_inputs/cart1.json", "sample_inputs/cart2.json", "sample_inputs/cart3.json",
                     "sample_inputs/cart4.json"]
+INVALID_CART_FILE = ["sample_inputs/cart5.json"]
 EXPECTED_OUTPUTS = [4560, 9363, 9500, 11356]
 INPUT_INDEX = 3
 TEST_BASE_PRICE = "sample_inputs/base_price.json"
@@ -50,6 +51,9 @@ class BasePriceTestCase(unittest.TestCase):
         self.assertEqual(bp_small_white_hoodie, 3800)
         self.assertEqual(bp_medium_sticker, 583)
         self.assertEqual(bp_leggings, 5000)
+
+        with self.assertRaises(Exception):
+            base_prices.get_base_price(ProductType.STICKER, {ProductOptions.SIZE: 'ui'})
 
 
 suite1 = unittest.TestLoader().loadTestsFromTestCase(CartTestCase)

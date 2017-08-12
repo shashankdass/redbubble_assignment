@@ -22,3 +22,5 @@ class BasePrices:
         for bp in base_price_list:
             if all([options[option] in bp.bp_options[option] for option in option_list]):
                 return bp.base_price
+
+        raise Exception("No base price found for given input.")
