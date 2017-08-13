@@ -3,7 +3,7 @@ import json
 
 from base_prices import BasePrices
 from cart import Cart
-from constants import ProductType, ProductOptions
+from test_constants import ProductType, ProductOptions
 
 TEST_CART_INPUTS = ["sample_inputs/cart1.json", "sample_inputs/cart2.json", "sample_inputs/cart3.json",
                     "sample_inputs/cart4.json"]
@@ -15,6 +15,12 @@ DISTINCT_PRODUCTS = 3
 
 
 class CartTestCase(unittest.TestCase):
+    """
+    Test suite to test cart
+    Test cases added:
+        1) test_cart_creation: test the length of created cart  is equal to the items in json
+        2) test_total_price_of_cart: test the calculate price functionality.
+    """
     def setUp(self):
         this_cart = TEST_CART_INPUTS[INPUT_INDEX]
         with open(TEST_BASE_PRICE) as data_file:
@@ -33,6 +39,13 @@ class CartTestCase(unittest.TestCase):
 
 
 class BasePriceTestCase(unittest.TestCase):
+    """
+    Test suite to test base price class functions.
+    Test cases added:
+        1) test_base_price_creation : test the length of base price items created to be equal to items in json
+        2) test_get_base_price: test the functionality of getting the base price with given options. Also test it raises
+        Exception for invalid options.
+    """
     def setUp(self):
         with open(TEST_BASE_PRICE) as data_file:
             self.base_price_data = json.load(data_file)

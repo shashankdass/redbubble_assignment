@@ -5,6 +5,16 @@ from constants import ItemConstants
 
 
 class BasePrices:
+    """Represent list of base price items.
+
+    Constructor:
+    __init__: creates a base price list out of json items. It also maintains number of unique options for each
+            product type.
+
+    Available functions:
+    get_base_price : utility function to get the base price of a product given product type and options.
+
+    """
     def __init__(self, base_price_json):
         self.base_prices = defaultdict(list)
         self.option_list_for_product = defaultdict(list)

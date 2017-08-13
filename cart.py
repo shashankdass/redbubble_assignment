@@ -3,6 +3,15 @@ from constants import ItemConstants
 
 
 class Cart:
+    """Represents a cart.
+
+    Constructor:
+    creates a list of cart items from cart json.
+
+    Available functions:
+    calculate_total_price: calculates the total price of the cart.
+
+    """
     def __init__(self, cart_data_json, base_prices):
         self.cart_items = []
         for cart_item in cart_data_json:
