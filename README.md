@@ -4,6 +4,7 @@ Architectural Overview:
 
 Get File Input --> Parse Input --> Create base price data structure -->
 Use it to calculate the price of each item in cart -->  Show total price
+
 ==========================================================================
 
 There are couple of ways you can run this program:

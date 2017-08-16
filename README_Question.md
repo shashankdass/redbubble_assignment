@@ -12,7 +12,7 @@ For example, if the first record with the product-type 'hoodie' in the list of b
 Calculate the price for one item as follows: (base_price + round(base_price * artist_markup)) * quantity
 Your program should output the total price in cents followed by a newline character.
 As an aid in testing your program, the name of each example cart file mentioned above includes the expected total price for that cart given the base prices in the example base prices file mentioned above.
-The time your program takes to calculate a price should be constant with respect to the number of base prices. (In real life, Redbubble currently has more than 1,000 base prices.)
+The time your program takes to calculate a price <b>should be constant with respect to the number of base prices.</b> (In real life, Redbubble currently has more than 1,000 base prices.)
 You need not test that the input files conform with their schemas or handle errors that arise if they don't conform or if they don't go with each other (e.g. if there is no base price for a product type in the cart). We'd all want those tests in a production application, but in this exercise they tend to take time without adding interest.
 Implementation requirements
 Include automated tests for your code. All of the following applies as much to your tests as to your code.
