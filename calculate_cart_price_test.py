@@ -11,7 +11,7 @@ INVALID_CART_FILE = ["sample_inputs/cart5.json"]
 EXPECTED_OUTPUTS = [4560, 9363, 9500, 11356]
 INPUT_INDEX = 3
 TEST_BASE_PRICE = "sample_inputs/base_price.json"
-DISTINCT_PRODUCTS = 3
+DISTINCT_PRODUCTS = 17
 
 
 class CartTestCase(unittest.TestCase):
